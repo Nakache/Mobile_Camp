@@ -18,11 +18,9 @@ class ViewController: UIViewController,
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cloudCoverLabel: UILabel!
     @IBOutlet weak var windLabel: UILabel!
-    //@IBOutlet weak var rainLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var iconLabel: UILabel!
-    //@IBOutlet weak var pressureLabel: UILabel!
     @IBOutlet weak var CommentaireLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var getCityWeatherButton: UIButton!
@@ -43,10 +41,7 @@ class ViewController: UIViewController,
         temperatureLabel.text = ""
         cloudCoverLabel.text = ""
         windLabel.text = ""
-        //rainLabel.text = ""
-        //humidityLabel.text = ""
         cityTextField.text = ""
-        //pressureLabel.text = ""
         iconLabel.text = ""
         CommentaireLabel.text = "Quel temps fera-t-il aujourd\'hui ?"
         cityTextField.placeholder = "Entrez le nom de la ville"
@@ -75,7 +70,6 @@ class ViewController: UIViewController,
             self.temperatureLabel.text = "\(Int(round(weather.tempCelsius)))°"
             self.cloudCoverLabel.text = "\(weather.cloudCover)%"
             self.windLabel.text = "\((weather.windSpeed)*3.6) km/h"
-            //self.pressureLabel.text = "\(weather.pressure)"
             self.iconLabel.text = "\(weather.weatherIconID)"
             
                 //Affiche dynamique SOLEIL N1
@@ -186,15 +180,6 @@ class ViewController: UIViewController,
                         self.imageView.image = UIImage(data: data)
                     }
                 }
-                //Fin affichage
-           /* if let rain = weather.rainfallInLast3Hours {
-                self.rainLabel.text = "\(rain) mm"
-            }
-            else {
-                self.rainLabel.text = "None"
-            }*/
-            
-            //self.humidityLabel.text = "\(weather.humidity)%"
         }
     }
     

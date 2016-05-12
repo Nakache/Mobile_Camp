@@ -38,7 +38,6 @@ struct Weather {
     let windSpeed: Double
     
     //Caracs météo à afficher
-    //let rainfallInLast3Hours: Double?
     
     let sunrise: NSDate
     let sunset: NSDate
