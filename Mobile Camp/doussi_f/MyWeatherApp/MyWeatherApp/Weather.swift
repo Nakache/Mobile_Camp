@@ -34,13 +34,11 @@ struct Weather {
             return (temp - 273.15) * 1.8 + 32
         }
     }
-    let humidity: Int
-    let pressure: Int
     let cloudCover: Int
     let windSpeed: Double
     
     //Caracs météo à afficher
-    let rainfallInLast3Hours: Double?
+    //let rainfallInLast3Hours: Double?
     
     let sunrise: NSDate
     let sunset: NSDate
@@ -61,22 +59,11 @@ struct Weather {
         
         let mainDict = weatherData["main"] as! [String: AnyObject]
         temp = mainDict["temp"] as! Double
-        humidity = mainDict["humidity"] as! Int
-        pressure = mainDict["pressure"] as! Int
         
         cloudCover = weatherData["clouds"]!["all"] as! Int
         
         let windDict = weatherData["wind"] as! [String: AnyObject]
         windSpeed = windDict["speed"] as! Double
-        //windDirection = windDict["deg"] as? Double
-        
-        if weatherData["rain"] != nil {
-            let rainDict = weatherData["rain"] as! [String: AnyObject]
-            rainfallInLast3Hours = rainDict["3h"] as? Double
-        }
-        else {
-            rainfallInLast3Hours = nil
-        }
         
         let sysDict = weatherData["sys"] as! [String: AnyObject]
         country = sysDict["country"] as! String

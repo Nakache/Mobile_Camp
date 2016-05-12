@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		1727E2C41CE20B72003D1FB2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1727E2C31CE20B72003D1FB2 /* CoreLocation.framework */; };
-		1727E2D31CE3996E003D1FB2 /* Paris.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1727E2D21CE3996E003D1FB2 /* Paris.jpg */; };
 		1727E2D71CE39CB0003D1FB2 /* semicloud.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1727E2D61CE39CB0003D1FB2 /* semicloud.jpg */; };
 		1727E2D91CE3A53F003D1FB2 /* soleil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1727E2D81CE3A53F003D1FB2 /* soleil.jpg */; };
 		1727E2DC1CE3A637003D1FB2 /* grosnuage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1727E2DA1CE3A637003D1FB2 /* grosnuage.jpg */; };
-		1727E2DD1CE3A637003D1FB2 /* nuages.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1727E2DB1CE3A637003D1FB2 /* nuages.jpg */; };
 		1727E2E01CE3A698003D1FB2 /* pluie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1727E2DE1CE3A698003D1FB2 /* pluie.jpg */; };
 		1727E2E11CE3A698003D1FB2 /* pluiefine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1727E2DF1CE3A698003D1FB2 /* pluiefine.jpg */; };
 		1727E2E31CE3A6FB003D1FB2 /* storm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1727E2E21CE3A6FB003D1FB2 /* storm.jpg */; };
 		1727E2E61CE3A771003D1FB2 /* mist.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1727E2E41CE3A771003D1FB2 /* mist.jpg */; };
 		1727E2E71CE3A771003D1FB2 /* snow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1727E2E51CE3A771003D1FB2 /* snow.jpg */; };
+		1727E2E91CE45FF8003D1FB2 /* parisbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1727E2E81CE45FF8003D1FB2 /* parisbg.jpg */; };
+		1727E2EB1CE460C8003D1FB2 /* nuages.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1727E2EA1CE460C8003D1FB2 /* nuages.jpg */; };
 		1798C37D1CE098F200601728 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798C37C1CE098F200601728 /* AppDelegate.swift */; };
 		1798C37F1CE098F200601728 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798C37E1CE098F200601728 /* ViewController.swift */; };
 		1798C3821CE098F200601728 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1798C3801CE098F200601728 /* Main.storyboard */; };
@@ -48,16 +48,16 @@
 
 /* Begin PBXFileReference section */
 		1727E2C31CE20B72003D1FB2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		1727E2D21CE3996E003D1FB2 /* Paris.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Paris.jpg; sourceTree = "<group>"; };
 		1727E2D61CE39CB0003D1FB2 /* semicloud.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = semicloud.jpg; sourceTree = "<group>"; };
-		1727E2D81CE3A53F003D1FB2 /* soleil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = soleil.jpg; sourceTree = "<group>"; };
+		1727E2D81CE3A53F003D1FB2 /* soleil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = soleil.jpg; path = ../soleil.jpg; sourceTree = "<group>"; };
 		1727E2DA1CE3A637003D1FB2 /* grosnuage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grosnuage.jpg; sourceTree = "<group>"; };
-		1727E2DB1CE3A637003D1FB2 /* nuages.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nuages.jpg; sourceTree = "<group>"; };
 		1727E2DE1CE3A698003D1FB2 /* pluie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pluie.jpg; sourceTree = "<group>"; };
 		1727E2DF1CE3A698003D1FB2 /* pluiefine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pluiefine.jpg; sourceTree = "<group>"; };
 		1727E2E21CE3A6FB003D1FB2 /* storm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = storm.jpg; sourceTree = "<group>"; };
 		1727E2E41CE3A771003D1FB2 /* mist.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mist.jpg; sourceTree = "<group>"; };
 		1727E2E51CE3A771003D1FB2 /* snow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snow.jpg; sourceTree = "<group>"; };
+		1727E2E81CE45FF8003D1FB2 /* parisbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = parisbg.jpg; path = ../parisbg.jpg; sourceTree = "<group>"; };
+		1727E2EA1CE460C8003D1FB2 /* nuages.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nuages.jpg; path = ../nuages.jpg; sourceTree = "<group>"; };
 		1798C3791CE098F200601728 /* MyWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1798C37C1CE098F200601728 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1798C37E1CE098F200601728 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +104,6 @@
 		1798C3701CE098F200601728 = {
 			isa = PBXGroup;
 			children = (
-				1727E2D81CE3A53F003D1FB2 /* soleil.jpg */,
 				1727E2C31CE20B72003D1FB2 /* CoreLocation.framework */,
 				1798C37B1CE098F200601728 /* MyWeatherApp */,
 				1798C3901CE098F200601728 /* MyWeatherAppTests */,
@@ -127,7 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				1727E2D61CE39CB0003D1FB2 /* semicloud.jpg */,
-				1727E2D21CE3996E003D1FB2 /* Paris.jpg */,
+				1727E2EA1CE460C8003D1FB2 /* nuages.jpg */,
+				1727E2E81CE45FF8003D1FB2 /* parisbg.jpg */,
+				1727E2D81CE3A53F003D1FB2 /* soleil.jpg */,
 				1798C37C1CE098F200601728 /* AppDelegate.swift */,
 				1798C37E1CE098F200601728 /* ViewController.swift */,
 				1727E2E41CE3A771003D1FB2 /* mist.jpg */,
@@ -136,7 +137,6 @@
 				1727E2DE1CE3A698003D1FB2 /* pluie.jpg */,
 				1727E2DF1CE3A698003D1FB2 /* pluiefine.jpg */,
 				1727E2DA1CE3A637003D1FB2 /* grosnuage.jpg */,
-				1727E2DB1CE3A637003D1FB2 /* nuages.jpg */,
 				1798C3AA1CE09A4600601728 /* WeatherGetter.swift */,
 				1798C3AC1CE0FB2E00601728 /* Weather.swift */,
 				1798C3801CE098F200601728 /* Main.storyboard */,
@@ -271,14 +271,14 @@
 			files = (
 				1798C3871CE098F200601728 /* LaunchScreen.storyboard in Resources */,
 				1727E2E11CE3A698003D1FB2 /* pluiefine.jpg in Resources */,
-				1727E2DD1CE3A637003D1FB2 /* nuages.jpg in Resources */,
 				1727E2D71CE39CB0003D1FB2 /* semicloud.jpg in Resources */,
 				1727E2E61CE3A771003D1FB2 /* mist.jpg in Resources */,
 				1727E2E31CE3A6FB003D1FB2 /* storm.jpg in Resources */,
 				1727E2D91CE3A53F003D1FB2 /* soleil.jpg in Resources */,
 				1727E2E71CE3A771003D1FB2 /* snow.jpg in Resources */,
-				1727E2D31CE3996E003D1FB2 /* Paris.jpg in Resources */,
+				1727E2E91CE45FF8003D1FB2 /* parisbg.jpg in Resources */,
 				1798C3841CE098F200601728 /* Assets.xcassets in Resources */,
+				1727E2EB1CE460C8003D1FB2 /* nuages.jpg in Resources */,
 				1727E2E01CE3A698003D1FB2 /* pluie.jpg in Resources */,
 				1798C3821CE098F200601728 /* Main.storyboard in Resources */,
 				1727E2DC1CE3A637003D1FB2 /* grosnuage.jpg in Resources */,

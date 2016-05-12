@@ -18,7 +18,7 @@ protocol WeatherGetterDelegate {
 class WeatherGetter {
     
     private let openWeatherMapBaseURL = "http://api.openweathermap.org/data/2.5/weather"
-    private let openWeatherMapAPIKey = "1eeab788a455135472e650a08f08eb66"
+    private let openWeatherMapAPIKey = "bd5f79266e8afac0b75f5ce71ea35a59"
     
     private var delegate: WeatherGetterDelegate
     
@@ -31,7 +31,7 @@ class WeatherGetter {
         //Appel reseau
         let session = NSURLSession.sharedSession()
         
-        let weatherRequestURL = NSURL(string: "\(openWeatherMapBaseURL)?APPID=\(openWeatherMapAPIKey)&q=\(city)")!
+        let weatherRequestURL = NSURL(string: "\(openWeatherMapBaseURL)?APPID=\(openWeatherMapAPIKey)&q=\(city)&lang=fr")!
         
         //Appel + récup données
         let dataTask = session.dataTaskWithURL(weatherRequestURL) {
