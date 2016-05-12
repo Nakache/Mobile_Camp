@@ -18,11 +18,12 @@ class ViewController: UIViewController,
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cloudCoverLabel: UILabel!
     @IBOutlet weak var windLabel: UILabel!
-    @IBOutlet weak var rainLabel: UILabel!
+    //@IBOutlet weak var rainLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var iconLabel: UILabel!
-    @IBOutlet weak var pressureLabel: UILabel!
+    //@IBOutlet weak var pressureLabel: UILabel!
+    @IBOutlet weak var CommentaireLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var getCityWeatherButton: UIButton!
     
@@ -32,7 +33,7 @@ class ViewController: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
         //background de base
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Paris.jpg")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "parisbg.jpg")!)
 
         weather = WeatherGetter(delegate: self)
 
@@ -42,11 +43,12 @@ class ViewController: UIViewController,
         temperatureLabel.text = ""
         cloudCoverLabel.text = ""
         windLabel.text = ""
-        rainLabel.text = ""
-        humidityLabel.text = ""
+        //rainLabel.text = ""
+        //humidityLabel.text = ""
         cityTextField.text = ""
-        pressureLabel.text = ""
+        //pressureLabel.text = ""
         iconLabel.text = ""
+        CommentaireLabel.text = "Quel temps fera-t-il aujourd\'hui ?"
         cityTextField.placeholder = "Entrez le nom de la ville"
         cityTextField.delegate = self
         cityTextField.enablesReturnKeyAutomatically = true
@@ -72,14 +74,15 @@ class ViewController: UIViewController,
             self.weatherLabel.text = weather.weatherDescription
             self.temperatureLabel.text = "\(Int(round(weather.tempCelsius)))°"
             self.cloudCoverLabel.text = "\(weather.cloudCover)%"
-            self.windLabel.text = "\(weather.windSpeed) m/s"
-            self.pressureLabel.text = "\(weather.pressure)"
+            self.windLabel.text = "\((weather.windSpeed)*3.6) km/h"
+            //self.pressureLabel.text = "\(weather.pressure)"
             self.iconLabel.text = "\(weather.weatherIconID)"
             
                 //Affiche dynamique SOLEIL N1
                 if self.iconLabel.text == "01d" {
                     //background
                     self.view.backgroundColor = UIColor(patternImage: UIImage(named: "soleil.jpg")!)
+                    self.CommentaireLabel.text = "Il fait beau ! Attention aux coups de soleil"
                     //logo dynamique
                     if let url  = NSURL(string: "http://openweathermap.org/img/w/01d.png"),
                         data = NSData(contentsOfURL: url)
@@ -91,6 +94,7 @@ class ViewController: UIViewController,
                 if self.iconLabel.text == "02d" {
                     //background
                     self.view.backgroundColor = UIColor(patternImage: UIImage(named: "semicloud.jpg")!)
+                    self.CommentaireLabel.text = "Le soleil est là mais il joue à cache-cache avec la pluie !"
                     //logo dynamique
                     if let url  = NSURL(string: "http://openweathermap.org/img/w/02d.png"),
                         data = NSData(contentsOfURL: url)
@@ -102,6 +106,7 @@ class ViewController: UIViewController,
                 if self.iconLabel.text == "03d" {
                     //background
                     self.view.backgroundColor = UIColor(patternImage: UIImage(named: "nuages.jpg")!)
+                    self.CommentaireLabel.text = "Il y a quelques nuages... Rien de bien méchant"
                     //logo dynamique
                     if let url  = NSURL(string: "http://openweathermap.org/img/w/03d.png"),
                         data = NSData(contentsOfURL: url)
@@ -113,6 +118,7 @@ class ViewController: UIViewController,
                 if self.iconLabel.text == "04d" {
                     //background
                     self.view.backgroundColor = UIColor(patternImage: UIImage(named: "grosnuage.jpg")!)
+                    self.CommentaireLabel.text = "T'as vu tous ces nuages ? Attention à la pluie ! Espérons que le temps va s'améliorer"
                     //logo dynamique
                     if let url  = NSURL(string: "http://openweathermap.org/img/w/04d.png"),
                         data = NSData(contentsOfURL: url)
@@ -124,6 +130,7 @@ class ViewController: UIViewController,
                 if self.iconLabel.text == "09d" {
                     //background
                     self.view.backgroundColor = UIColor(patternImage: UIImage(named: "pluie.jpg")!)
+                    self.CommentaireLabel.text = "Tu as vu cette pluie ? Si tu sors prépare-toi à prendre une douche froide"
                     //logo dynamique
                     if let url  = NSURL(string: "http://openweathermap.org/img/w/09d.png"),
                         data = NSData(contentsOfURL: url)
@@ -135,6 +142,7 @@ class ViewController: UIViewController,
                 if self.iconLabel.text == "10d" {
                     //background
                     self.view.backgroundColor = UIColor(patternImage: UIImage(named: "pluiefine.jpg")!)
+                    self.CommentaireLabel.text = "Soleil-pluie Soleil-pluie Soleil-pluie. Ainsi est le rythme de la vie"
                     //logo dynamique
                     if let url  = NSURL(string: "http://openweathermap.org/img/w/10d.png"),
                         data = NSData(contentsOfURL: url)
@@ -146,6 +154,7 @@ class ViewController: UIViewController,
                 if self.iconLabel.text == "11d" {
                     //background
                     self.view.backgroundColor = UIColor(patternImage: UIImage(named: "storm.jpg")!)
+                    self.CommentaireLabel.text = "Le ciel gronde... Attention à l'orage ! Ne te mets pas sous les arbres surtout ! Sinon tu finis cuit !"
                     //logo dynamique
                     if let url  = NSURL(string: "http://openweathermap.org/img/w/11d.png"),
                         data = NSData(contentsOfURL: url)
@@ -157,6 +166,7 @@ class ViewController: UIViewController,
                 if self.iconLabel.text == "13d" {
                     //background
                     self.view.backgroundColor = UIColor(patternImage: UIImage(named: "snow.jpg")!)
+                    self.CommentaireLabel.text = "Le temps est parfait pour faire des bonhommes de neige ou une bataille de boule de neige ! Couvres toi bien !"
                     //logo dynamique
                     if let url  = NSURL(string: "http://openweathermap.org/img/w/13d.png"),
                         data = NSData(contentsOfURL: url)
@@ -168,6 +178,7 @@ class ViewController: UIViewController,
                 if self.iconLabel.text == "50d" {
                     //background
                     self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mist.jpg")!)
+                    self.CommentaireLabel.text = "Il y a du brouillard... Fais attention à toi si tu prends la voiture !"
                     //logo dynamique
                     if let url  = NSURL(string: "http://openweathermap.org/img/w/50d.png"),
                         data = NSData(contentsOfURL: url)
@@ -176,14 +187,14 @@ class ViewController: UIViewController,
                     }
                 }
                 //Fin affichage
-            if let rain = weather.rainfallInLast3Hours {
+           /* if let rain = weather.rainfallInLast3Hours {
                 self.rainLabel.text = "\(rain) mm"
             }
             else {
                 self.rainLabel.text = "None"
-            }
+            }*/
             
-            self.humidityLabel.text = "\(weather.humidity)%"
+            //self.humidityLabel.text = "\(weather.humidity)%"
         }
     }
     
